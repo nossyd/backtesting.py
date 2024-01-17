@@ -266,6 +266,10 @@ class Strategy(metaclass=ABCMeta):
         """
         return self._data
 
+    @data.setter
+    def data(self, new_val: float):
+        self._data.Close = new_val
+
     @property
     def position(self) -> 'Position':
         """Instance of `backtesting.backtesting.Position`."""
